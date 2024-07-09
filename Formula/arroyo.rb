@@ -5,7 +5,7 @@ class Arroyo < Formula
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/ArroyoSystems/arroyo/releases/download/v0.11.0/arroyo-macos-m1.tar.gz"
-      sha256 "56e4e0202ee3f6f38fd29bf7293baa370e584881c0b1d7ddc8a1b0a60e29caf3"
+      sha256 "d9e15cf1581978fde927b8d1db42e487daccec64ac0516b7c454f52a52d0273e"
     end
     if Hardware::CPU.intel?
       odie "This formula does not support Intel Macs. You can run Arroyo using the docker image or build a binary using the developer instructions: https://doc.arroyo.dev/developing/dev-setup."
