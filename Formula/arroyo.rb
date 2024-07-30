@@ -1,7 +1,7 @@
 class Arroyo < Formula
   desc "The Arroyo stream processing engine"
   homepage "https://www.arroyo.dev"
-  version "0.11.1"
+  version "0.11.2"
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/ArroyoSystems/arroyo/releases/download/v0.11.2/arroyo-macos-m1.tar.gz"
