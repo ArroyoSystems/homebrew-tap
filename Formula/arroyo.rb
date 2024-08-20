@@ -1,11 +1,11 @@
 class Arroyo < Formula
   desc "The Arroyo stream processing engine"
   homepage "https://www.arroyo.dev"
-  version "0.11.2"
+  version "0.11.3"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/ArroyoSystems/arroyo/releases/download/v0.11.2/arroyo-macos-m1.tar.gz"
-      sha256 "03c32202821b9947545735379d614da304c56ced7494a699b5ac7e2cc39f9781"
+      url "https://github.com/ArroyoSystems/arroyo/releases/download/v0.11.3/arroyo-macos-m1.tar.gz"
+      sha256 "4d5514d278c2ed76e2dc7076f65d52f0c66330824c54c00fb765a8938007c2f8"
     end
     if Hardware::CPU.intel?
       odie "This formula does not support Intel Macs. You can run Arroyo using the docker image or build a binary using the developer instructions: https://doc.arroyo.dev/developing/dev-setup."
@@ -13,12 +13,12 @@ class Arroyo < Formula
   end
   if OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/ArroyoSystems/arroyo/releases/download/v0.11.2/arroyo-linux-x86_64.tar.gz"
-      sha256 "89055bfb36c85102e19fef836b75dfd8552b55240db66c35556d2ccecf640d88"
+      url "https://github.com/ArroyoSystems/arroyo/releases/download/v0.11.3/arroyo-linux-x86_64.tar.gz"
+      sha256 "6d1874410a992b21162c2bd84fac7c6fd0a534b572f1e82e72b83e8a3fa595d1"
     end
     if Hard::CPU.arm?
-      url "https://github.com/ArroyoSystems/arroyo/releases/download/v0.11.2/arroyo-linux-arm64.tar.gz"
-      sha256 "0d01ec35e8b9b3046bea8d4081ac93a2fd3ed6ac77ce4bec1eebb17e2afb6133"
+      url "https://github.com/ArroyoSystems/arroyo/releases/download/v0.11.3/arroyo-linux-arm64.tar.gz"
+      sha256 "5d38ce6ef8aae653d74e5bff8c8598e3d8393474d19972419249b0396a6f588f"
     end
   end
 
