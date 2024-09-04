@@ -8,7 +8,8 @@ class Arroyo < Formula
       sha256 "4d5514d278c2ed76e2dc7076f65d52f0c66330824c54c00fb765a8938007c2f8"
     end
     if Hardware::CPU.intel?
-      odie "This formula does not support Intel Macs. You can run Arroyo using the docker image or build a binary using the developer instructions: https://doc.arroyo.dev/developing/dev-setup."
+      url "https://github.com/ArroyoSystems/arroyo/releases/download/v0.11.3/arroyo-macos-x86_64".tar.gz
+      sha256 "6548ff31f7e8e2e714575510554c38d07503cd2e6113aec91d1d9ba9cd531374"
     end
   end
   if OS.linux?
