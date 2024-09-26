@@ -1,18 +1,18 @@
 class Arroyo < Formula
   desc "The Arroyo stream processing engine"
   homepage "https://www.arroyo.dev"
-  version "0.12.0"
+  version "0.12.0-1"
 
   depends_on "python@3.12"
 
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/ArroyoSystems/arroyo/releases/download/v0.12.0/arroyo-macos-m1-python.tar.gz"
-      sha256 "4cc7eea2327e373d5cac3f50f80e272807fbaca6403228d8d5f4e4131dde284f"
+      sha256 "c502085ae80e47f4924f7ef1c74dbd069a3556944b73ccbb850a7c7229caf7ea"
     end
     if Hardware::CPU.intel?
       url "https://github.com/ArroyoSystems/arroyo/releases/download/v0.12.0/arroyo-macos-x86_64-python".tar.gz
-      sha256 "ab4d2c5029fc6ac563308fe396b76812b24226618aa04bdc03f0862aaa3c4110"
+      sha256 "3db09d7ec61efcaaf152328a5ac41a709238bf704ed8ce627184d42f2f42bcc5"
     end
   end
   if OS.linux?
