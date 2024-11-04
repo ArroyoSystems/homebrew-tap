@@ -7,22 +7,22 @@ class Arroyo < Formula
 
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/ArroyoSystems/arroyo/releases/download/v0.12.0/arroyo-macos-m1-python.tar.gz"
-      sha256 "c502085ae80e47f4924f7ef1c74dbd069a3556944b73ccbb850a7c7229caf7ea"
+      url "https://github.com/ArroyoSystems/arroyo/releases/download/v0.12.1/arroyo-macos-m1-python.tar.gz"
+      sha256 "7e8f1dfb14063b52943dd50c9eb6963fc327178b67230c4627460547b2e81252"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ArroyoSystems/arroyo/releases/download/v0.12.0/arroyo-macos-x86_64-python".tar.gz
-      sha256 "3db09d7ec61efcaaf152328a5ac41a709238bf704ed8ce627184d42f2f42bcc5"
+      url "https://github.com/ArroyoSystems/arroyo/releases/download/v0.12.1/arroyo-macos-x86_64-python".tar.gz
+      sha256 "e0f695c504dc1ee06470695ae3ef76f9b5c1f5627c54f6361cf2427b6c97af8d"
     end
   end
   if OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/ArroyoSystems/arroyo/releases/download/v0.12.0/arroyo-linux-x86_64-python.tar.gz"
-      sha256 "5a21624e79ced7a0734f37168b18e257589c07ac6805534eef2495a666445d80"
+      sha256 "bb8917cf12c2fa177583cf6f7bfc97bf9beac6f2c71edd035ad943de93c98b54"
     end
     if Hard::CPU.arm?
       url "https://github.com/ArroyoSystems/arroyo/releases/download/v0.12.0/arroyo-linux-aarch64-python.tar.gz"
-      sha256 "732c65b6559eb09574746696cd9fd2d9619b2270dd21074a85e6845e9fc0caca"
+      sha256 "97f1f8e831a91bc472d248947bcdb370518830a5648fd378e707454dd707ede0"
     end
   end
 
