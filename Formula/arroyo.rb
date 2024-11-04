@@ -1,7 +1,7 @@
 class Arroyo < Formula
   desc "The Arroyo stream processing engine"
   homepage "https://www.arroyo.dev"
-  version "0.12.0-1"
+  version "0.12.1"
 
   depends_on "python@3.12"
 
