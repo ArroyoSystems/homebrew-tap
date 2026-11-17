@@ -1,32 +1,32 @@
 class Arroyo < Formula
   desc "The Arroyo stream processing engine"
   homepage "https://www.arroyo.dev"
-  version "0.15.0"
+  version "0.16.0"
 
   depends_on "python@3.12"
 
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/ArroyoSystems/arroyo/releases/download/v0.15.0/arroyo-macos-m1-python.tar.gz"
-      sha256 "3f37af584a1d8ebd950d9188ec9a8562c898d66f81f9934b26ae207482e5b99e"
+      url "https://github.com/ArroyoSystems/arroyo/releases/download/v0.16.0/arroyo-macos-m1-python.tar.gz"
+      sha256 "02dc911520d16add71b7d487607d2bbe2bfe7d3350bbb989156489cf6da7e1b5"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ArroyoSystems/arroyo/releases/download/v0.15.0/arroyo-macos-x86_64-python".tar.gz
-      sha256 "4b7549b18c3fb08df0fdde094eefd5f4969dd6716de6f99eb01c38a2f4a9074f"
+      url "https://github.com/ArroyoSystems/arroyo/releases/download/v0.16.0/arroyo-macos-x86_64-python.tar.gz"
+      sha256 "d24212eb539bb9b49b8af0aea612f88bc2dcc3e87b9ecbed77bbef5e1d37fbfd"
     end
-    if OS.linux?
-      if Hardware::CPU.intel?
-        url "https://github.com/ArroyoSystems/arroyo/releases/download/v0.15.0/arroyo-linux-x86_64-python.tar.gz"
-        sha256 "a29ca5e67cad4e579b6c0e548d4f9b4d0bd21d9add5ac14eb6adf78a92776ac7"
-      end
-      if Hard::CPU.arm?
-        url "https://github.com/ArroyoSystems/arroyo/releases/download/v0.15.0/arroyo-linux-aarch64-python.tar.gz"
-        sha256 "101ba1330ddd35e7f11419dd578911799f32a75bf3fe6984b5c03e4264678ab5"
-      end
+  end
+  if OS.linux?
+    if Hardware::CPU.intel?
+      url "https://github.com/ArroyoSystems/arroyo/releases/download/v0.16.0/arroyo-linux-x86_64-python.tar.gz"
+      sha256 "e47902934aaf67f41fc337c2abab7abb1eab19cef0e16a6a9ae1dacc344a8f68"
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/ArroyoSystems/arroyo/releases/download/v0.16.0/arroyo-linux-aarch64-python.tar.gz"
+      sha256 "2b2060b4f1068ba8c79b01a2423e71173fd8791ee0f6aa21a88eeb9688911b40"
     end
   end
 
-  BINARY_ALIASES = {"aarch64-apple-darwin": {}, "x86_64-apple-darwin": {}, "x86_64-pc-windows-gnu": {}, "x86_64-unknown-linux-gnu": {}}
+  BINARY_ALIASES = {"aarch64-apple-darwin": {}, "x86_64-apple-darwin": {}, "x86_64-pc-windows-gnu": {}, "x86_64-unknown-linux-gnu": {}, "aarch64-unknown-linux-gnu": {}}
 
   def target_triple
     cpu = Hardware::CPU.arm? ? "aarch64" : "x86_64"
@@ -44,15 +44,7 @@ class Arroyo < Formula
   end
 
   def install
-    if OS.mac? && Hardware::CPU.arm?
-      bin.install "arroyo"
-    end
-    if OS.linux? && Hardware::CPU.arm?
-      bin.install "arroyo"
-    end
-    if OS.linux? && Hardware::CPU.intel?
-      bin.install "arroyo"
-    end
+    bin.install "arroyo"
 
     install_binary_aliases!
 
